@@ -11,7 +11,7 @@ let userFinalTierMap;
 let fmcPower;
 
 
-function format(time) {
+function format(time, noTrail=false) {
     if (time == -1) {
         return "";
     }
@@ -23,7 +23,9 @@ function format(time) {
 
     var result = seconds + "." + millis.toString().padStart(3, "0");
     // Remove unnecessary trailing zeros after the decimal point
-    result = result.replace(/\.?0+$/, ''); // Remove trailing zeros & dot if necessary
+    if (noTrail) {
+        result = result.replace(/\.?0+$/, ''); // Remove trailing zeros & dot if necessary
+    }
     return result;
     
 }
@@ -142,7 +144,7 @@ function populate_table(table){
 
         for(var j=0; j<num_categories; j++){
             var div = document.createElement("td");
-            div.textContent = format(tier["times"][j]);
+            div.textContent = format(tier["times"][j], true);
             div.setAttribute("tierf", attrName);
             tier_req_row.appendChild(div);
         }
@@ -229,7 +231,7 @@ function populate_table(table){
                 let time = user[j+3];
 
                 var div = document.createElement("td");
-                div.textContent = format(time);
+                div.textContent = format(time, fmcPower);
 
                 user_row.appendChild(div);
 
