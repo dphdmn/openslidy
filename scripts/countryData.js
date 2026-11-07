@@ -36,7 +36,7 @@ const rename_map = {
     'yzx': '554',
     'JonasCuber11': 'JonasCuber10',
     'Dreamer': 'DreamerTheWolfFox',
-    'Zip': 'fuenfeck',
+    'fuenfeck': 'Zip',
     'Dawidluna': 'Emi',
     'JZE_alt': 'JZE',
     'pluginl': 'redaiyu',
