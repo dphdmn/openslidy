@@ -66,7 +66,8 @@ const rename_map = {
     'xhx1791': '_1791',
     'KoluNoa': 'kolunoa',
     'skye_trackpad': 'skye',
-    'aky_': 'aky'
+    'aky_': 'aky',
+    'anjak4': 'anja4k',
 };
 //'Jur105': same as uid 126470 if later included
 //乌米玲 - ???
